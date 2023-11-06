@@ -27,12 +27,16 @@ function myFunction() {
 
 // Calculator Callback
 function myDisplayer(something) {
+    // This line accesses the DOM (Document Object Model) to find an HTML element with the ID sum. Once it finds this
+    // element, it sets its innerHTML property to the value of something. This effectively changes the content of the sum element to display whatever value something holds.
     document.getElementById('sum').innerHTML = something;
 }
-
+// This line declares another function called myCalculator that takes three parameters: num1, num2, and myCallback.
+// The first two are expected to be numbers, and the third is expected to be a function.
 function myCalculator(num1, num2, myCallback) {
     let sum = num1 + num2;
     myCallback(sum);
 }
-
+// The 'myCalculator' function is called with 44 and 25 as the numbers to add and 'myDisplayer' as the callback function.
+// The function will calculate the sum of 44 and 25, which is 69, and then call 'myDisplayer(69)'.
 myCalculator(44, 25, myDisplayer);
