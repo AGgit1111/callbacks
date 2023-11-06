@@ -8,7 +8,7 @@ string 'Data retrieved' as an argument. */
 function fetchData(callback) {
     setTimeout(() => {
         // Simulate a delay like fetching data from a server
-        callback('Data retrieved');
+        callback(document.getElementById('textDelay1').innerHTML = 'Data retrieved!');
     }, 2000); // 2000 milliseconds = 2 seconds
 }
 
@@ -17,3 +17,10 @@ function displayData(data) {
 }
 
 fetchData(displayData);
+
+// setTimeout() with a Callback
+setTimeout(myFunction, 3000);
+
+function myFunction() {
+    document.getElementById('textDelay2').innerHTML = 'Hey, gorgeous!';
+}
