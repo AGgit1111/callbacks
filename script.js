@@ -24,3 +24,15 @@ setTimeout(myFunction, 3000);
 function myFunction() {
     document.getElementById('textDelay2').innerHTML = 'Hey, gorgeous!';
 }
+
+// Calculator Callback
+function myDisplayer(something) {
+    document.getElementById('sum').innerHTML = something;
+}
+
+function myCalculator(num1, num2, myCallback) {
+    let sum = num1 + num2;
+    myCallback(sum);
+}
+
+myCalculator(44, 25, myDisplayer);
